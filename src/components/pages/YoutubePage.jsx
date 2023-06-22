@@ -11,7 +11,7 @@ const Youtube = () => {
 
   const search = async (query) => {
     await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${query}&type=video&videoDuration=medium&key=AIzaSyCP7j_dh-rc1KAc4FUEHCGNU0MZhPsM_Rw`, 
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=32&q=${query}&type=video&videoDuration=medium&key=AIzaSyCP7j_dh-rc1KAc4FUEHCGNU0MZhPsM_Rw`, 
     )
       .then(response => response.json())
       .then(result => setYoutubes(result.items))
@@ -20,7 +20,7 @@ const Youtube = () => {
 
   useEffect(() => {
     fetch(
-      'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=농구&type=video&videoDuration=medium&key=AIzaSyCP7j_dh-rc1KAc4FUEHCGNU0MZhPsM_Rw'
+      'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=32&q=농구&type=video&videoDuration=medium&key=AIzaSyCP7j_dh-rc1KAc4FUEHCGNU0MZhPsM_Rw'
     ).then((response) => response.json())
     .then((result) => setYoutubes(result.items))
     .catch((error) => console.log(error))
@@ -29,11 +29,11 @@ const Youtube = () => {
   return (
     <>
       <Contents>
-        <ContTitle title="youtube"/>
-        <YoutubeSlider />
-        <YoutubeSearch onSearch={search}/>
-        <YoutubeTag />
-        <YoutubeCont youtubes={youtubes}/>
+        <ContTitle title="youtube" />
+        <YoutubeSlider youtubes={youtubes} />
+        <YoutubeSearch onSearch={search} />
+        <YoutubeTag onSearch={search} />
+        <YoutubeCont youtubes={youtubes} />
       </Contents>
     </>
   )

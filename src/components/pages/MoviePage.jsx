@@ -18,6 +18,15 @@ const MoviePage = () => {
       .catch(error => console.log(error));
   }
 
+  const tags = async (query) => {
+    await fetch(
+      `${query}?api_key=d437b67f2b55e3f176bbe6232a79ad1b&language=ko-KR`, 
+    )
+      .then(response => response.json())
+      .then(result => setMovies(result.results))
+      .catch(error => console.log(error));
+  }
+
   useEffect(() => {
     var requestOptions = {
       method: 'GET',
@@ -39,7 +48,7 @@ const MoviePage = () => {
         <ContTitle title="movie" />
         <MovieSlider movies={movies} />
         <MovieSearch onSearch={search} />
-        <MovieTag />
+        <MovieTag onSearch={tags} />
         <MovieCont movies={movies} />
       </Contents>
     </>

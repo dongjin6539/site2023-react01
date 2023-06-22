@@ -56,18 +56,25 @@
     }
 }
 .movie__tag {
-    ul {
+    div {
         display: flex;
         justify-content: center;
         margin-top: 100px;
         margin-bottom: 50px;
-        li {
-            a {
-                border: 1px solid #FF3344;
-                padding: 10px 20px;
-                margin: 0 10px;
-                color: #FF3344;
+        button {
+            border: 1px solid #FF3344;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #FF3344;
+            background-color: #fff;
+            &:hover {
+                background-color: #FF3344;
+                color: #fff;
             }
+        }
+        button.active {
+            background-color: #FF3344; /* 선택된 태그의 배경색 */
+            color: #ffffff; /* 선택된 태그의 텍스트 색상 */
         }
     }
 }
@@ -76,6 +83,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-end;
         margin-bottom: 100px;
         li {
             width: 24%;
@@ -91,8 +99,11 @@
             }
             .title {
                 font-size: 20px;
-                display: inline-block;
+                display: block;
                 padding: 3px 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             .star {
                 position: absolute;
@@ -110,4 +121,8 @@
             }
         }
     }
+}
+
+.swiper {
+    padding: 20px 0 50px;
 }

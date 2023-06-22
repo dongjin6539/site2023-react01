@@ -9,10 +9,17 @@
             border-radius: 50px;
             margin: 10px;
             padding: 5px;
+            color: #fff;
+            &:hover {
+                background-color: #3969e4;
+                border: 1px solid #3969e4;
+                color: #fff;
+            }
         }
         button.active {
             background-color: #3969e4;
             border: 1px solid #3969e4;
+            color: #fff;
         }
     }
     .port__cont {
@@ -45,35 +52,62 @@
                         margin-bottom: 5px;
                         font-size: 24px;
                     }
-                    a {
+                    p {
                         color: #a0a0a0;
-                    }
-                    a:hover {
-                        text-decoration: underline;
-                        text-underline-position: under;
                     }
                 }
             }
             &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                 margin-bottom: 50px;
             }
-            &:nth-child(1) .port__body span {
-                background-color: #c5a8a8;
+            &:hover > a > .port__body > div > p {
+                text-decoration: underline;
+                text-underline-position: under;
             }
-            &:nth-child(2) .port__body span {
-                background-color: #c5c5a8;
+        }
+    }
+    .port__cont2 {
+        @include flex-between;
+        flex-wrap: wrap;
+        .port {
+            width: 23%;
+            .port__header {
+                margin-bottom: 10px;
+                img {
+                    width: 100%;
+                }
             }
-            &:nth-child(3) .port__body span {
-                background-color: #a8c5ad;
+            .port__body {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    border-radius: 50px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                > div {
+                    margin-top: 10px;
+                    width: 80%;
+                    text-align: left;
+                    h4 {
+                        margin-bottom: 5px;
+                        font-size: 24px;
+                    }
+                    p {
+                        color: #a0a0a0;
+                    }
+                }
+                
             }
-            &:nth-child(4) .port__body span {
-                background-color: #a8bac5;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                margin-bottom: 50px;
             }
-            &:nth-child(5) .port__body span {
-                background-color: #a8acc5;
-            }
-            &:nth-child(6) .port__body span {
-                background-color: #bca8c5;
+            &:hover > a > .port__body > div > p {
+                text-decoration: underline;
+                text-underline-position: under;
             }
         }
     }

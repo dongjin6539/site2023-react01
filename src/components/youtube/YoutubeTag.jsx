@@ -1,16 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const YoutubeTag = () => {
+const youtubeTage = [
+  { name: "nba"},
+  { name: "kbl"},
+  { name: "sports"},
+  { name: "baseball"},
+  { name: "soccor"},
+  { name: "basketball"},
+]
+
+const YoutubeTag = ({ onSearch }) => {
+  const [activeTag, setActiveTag] = React.useState('');
+  function btnClick(e){
+    setActiveTag(e.target.innerText);
+    onSearch(e.target.innerText);
+  }
   return (
     <div className="youtube__tag">
-      <ul>
-        <li><Link to="/">nba</Link></li>
-        <li><Link to="/">wnba</Link></li>
-        <li><Link to="/">kbl</Link></li>
-        <li><Link to="/">wkbl</Link></li>
-        <li><Link to="/">basketball</Link></li>
-      </ul>
+      <div>
+        {youtubeTage.map((tag, index) => (
+          <button onClick={btnClick} key={index} className={tag.name === activeTag ? 'active' : ''}>{tag.name}</button>
+        ))}
+      </div>
     </div>
   )
 }
