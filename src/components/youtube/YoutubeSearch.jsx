@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-const UnsplashSerach = ({ onSearch }) => {
+const YoutubeSerach = ({ onSearch }) => {
   const inputRef = useRef();
   const handleSearch = () => {
     const value = inputRef.current.value;
@@ -24,4 +24,4 @@ const UnsplashSerach = ({ onSearch }) => {
   )
 };
 
-export default UnsplashSerach;
+export default YoutubeSerach;

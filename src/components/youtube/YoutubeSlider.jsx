@@ -18,7 +18,7 @@ const YoutubeImg = ({ youtube }) => {
 
 const YoutubeSlider = ({ youtubes }) => {
   return (
-    <div className='movie__slider'>
+    <div className='youtube__slider'>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
