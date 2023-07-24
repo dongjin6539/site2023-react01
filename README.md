@@ -1,4 +1,5 @@
-![image](https://github.com/dongjin6539/car_showcase/blob/main/image.png)
+![image](https://github.com/dongjin6539/site2023-react01
+/readme.png)
 
 # React.js를 이용한 사이트 만들기
 
