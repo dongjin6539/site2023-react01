@@ -13,9 +13,9 @@ https://sdj-site-react01.netlify.app/
 - 웹 표준 및 웹 접근성을 준수합니다. [ARIA(Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
 ## API 키 사용
-- youtube(https://www.youtube.com/)에서 API 키를 받아서 데이터를 가져옵니다.
-- unsplash(https://unsplash.com/ko)에서 API 키를 받아서 데이터를 가져옵니다.
-- TMDB(movie)(https://www.themoviedb.org/?language=ko)에서 API 키를 받아서 데이터를 가져옵니다.
+- youtube(https://www.youtube.com/) 에서 API 키를 받아서 데이터를 가져옵니다.
+- unsplash(https://unsplash.com/ko) 에서 API 키를 받아서 데이터를 가져옵니다.
+- TMDB(movie)(https://www.themoviedb.org/?language=ko) 에서 API 키를 받아서 데이터를 가져옵니다.
 
 ## 프로젝트 실행
 
